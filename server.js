@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const NASA_API_KEY = process.env.NASA_API_KEY || "API_KEY";
 const NEWS_API_KEY = process.env.NEWS_API_KEY; // Usa la clave del .env
-
+import { NEWS_API_KEY, NASA_API_KEY } from './config.js';
 app.use(cors()); // Permite solicitudes desde el frontend
 app.use(express.json());
 app.use(express.static("public")); // Para servir archivos estáticos como HTML, CSS, JS
