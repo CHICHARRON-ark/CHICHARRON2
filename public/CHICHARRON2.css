@@ -1,0 +1,79 @@
+/* Colores de fondo y texto */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilo para el encabezado */
+h1 {
+    text-align: center;
+    color: #fb8220;
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+/* Contenedor de noticias */
+#news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo para cada artículo de noticia */
+.news-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la noticia */
+.news-item h3 {
+    color: #fb8220;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+/* Descripción de la noticia */
+.news-item p {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Enlace para leer más */
+.news-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fb8220;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.news-item a:hover {
+    background-color:#fb8220;
+}
+
+/* Mensaje de "No se encontraron noticias" */
+#news-container p {
+    font-size: 18px;
+    color: #000000;
+}

@@ -1,0 +1,121 @@
+/* Colores de fondo y texto */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilo para el encabezado */
+h1 {
+    text-align: center;
+    color: #fb8220;
+    margin-top: 30px;
+    font-size: 36px;
+}
+
+/* Contenedor de noticias */
+#news-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo para cada artículo de noticia */
+.news-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de la noticia */
+.news-item h3 {
+    color: #2C3E50;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+/* Descripción de la noticia */
+.news-item p {
+    color: #7f8c8d;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Enlace para leer más */
+.news-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.news-item a:hover {
+    background-color: #45a049;
+}
+
+/* Mensaje de "No se encontraron noticias" */
+#news-container p {
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+/* ========================= */
+/* 📌 ESTILOS MODIFICADOS PARA LOS BOTONES */
+/* ========================= */
+
+/* Contenedor de botones centrado */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo de los botones */
+.custom-button {
+    background-color: #fb8220;  /* Verde (igual que el encabezado) */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover */
+.custom-button:hover {
+    background-color: #f9ad62;
+    transform: scale(1.05);
+}
+
+/* Efecto al presionar */
+.custom-button:active {
+    background-color: #2E7D32;
+    transform: scale(0.98);
+}
+
+.MENU {
+    color: rgb(255, 166, 0);
+}

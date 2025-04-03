@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CHICHARRON1.css">
+    <title>NASA</title>
+</head>
+<body>
+    <h1>Imagen del Día NASA APOD</h1>
+    <button onclick="obtenerImagen()">Cargar Imagen</button>
+    <h2 id="titulo"></h2>
+    <p id="descripcion"></p>
+    <img id="imagen" src="" alt="Imagen del Día de la NASA">
+    <script>
+        async function obtenerImagen() {
+            try {
+                const response = await fetch("/apod");
+                const data = await response.json();
+                document.getElementById("titulo").innerText = data.title;
+                document.getElementById("descripcion").innerText = data.explanation;
+                document.getElementById("imagen").src = data.url;
+            } catch (error) {
+                console.error("Error al obtener la imagen:", error);
+            }
+        }
+    </script>
+</body>
+</html>

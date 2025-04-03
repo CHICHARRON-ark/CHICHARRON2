@@ -1,0 +1,53 @@
+/* CHICHARRON.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #000000, #1a1a44); /* Simula el espacio */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #f5c518; /* Inspirado en tonos de estrellas */
+    text-shadow: 0 0 10px #f5c518, 0 0 20px #ff9900;
+}
+
+button {
+    background: #0077ff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #005fcc;
+    transform: scale(1.1);
+}
+
+#titulo {
+    font-size: 1.8rem;
+    color: #f5c518;
+    margin-top: 20px;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #f5c518;
+}
+
+#descripcion {
+    font-size: 1rem;
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #dddddd;
+}

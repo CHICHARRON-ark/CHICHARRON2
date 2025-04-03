@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="CHICHARRON2.css">
+</head>
+<body>
+    <h1>Últimas Noticias</h1>
+    <div id="news-container"></div>
+
+    <script>
+        // Función para cargar las noticias desde el servidor
+        async function loadNews() {
+            try {
+                const response = await fetch('/news');
+                const data = await response.json();
+
+                const newsContainer = document.getElementById('news-container');
+                newsContainer.innerHTML = '';  // Limpiar el contenedor
+
+                if (data && data.results) {
+                    data.results.forEach(news => {
+                        const newsItem = document.createElement('div');
+                        newsItem.classList.add('news-item');
+                        newsItem.innerHTML = `
+                            <h3>${news.title}</h3>
+                            <p>${news.description}</p>
+                            <a href="${news.link}" target="_blank">Leer más</a>
+                        `;
+                        newsContainer.appendChild(newsItem);
+                    });
+                } else {
+                    newsContainer.innerHTML = '<p>No se encontraron noticias.</p>';
+                }
+            } catch (error) {
+                console.error('Error al cargar las noticias:', error);
+            }
+        }
+
+        // Cargar las noticias cuando la página se haya cargado
+        window.onload = loadNews;
+    </script>
+</body>
+</html>
